@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
+import { Col, Container, FormGroup, Input, Label, Row } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/common-section/CommonSection";
-import { Container, Row, Col, FormGroup, Label, Input } from "reactstrap";
-import { useDispatch } from "react-redux";
+import ProductCard from "../components/UI/product-card/ProductCard";
+import useAuth from "../hooks/useAuth";
 import { cartActions } from "../store/shopping-cart/cartSlice";
 import "../styles/food-details.css";
-import ProductCard from "../components/UI/product-card/ProductCard";
 import axiosInstance from "../utils/axiosInstance";
-import useAuth from "../hooks/useAuth";
 
 const FoodDetails = () => {
   const { userType } = useAuth();

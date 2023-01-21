@@ -4,6 +4,7 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from .models import User
 
 
+# first registration user make
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
@@ -53,6 +54,7 @@ class UserFullDetailSerializer(serializers.ModelSerializer):
         fields = ("full_name", "email", "img", "address", "phone", "type")
 
 
+#  admin site account create manually from react
 class UserCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
